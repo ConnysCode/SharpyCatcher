@@ -16,6 +16,7 @@ public class Config {
     public static String pokecordID = "365975655608745985";
     public static List<String> BOT_ADMINS = Collections.singletonList("");
     public static String SPAM_CHANNEL = "";
+    public static String PREFIX = "sc!";
     public static List<String> ACTIVE_GUILDS = Collections.singletonList("");
     public static List<String> SPAM_WORDS = Collections.singletonList("");
 
@@ -35,6 +36,7 @@ public class Config {
 
     public static void loadConfig() {
         try {
+            PREFIX =  properties.getProperty("own_prefix");
             BOT_ADMINS =  Arrays.asList(properties.getProperty("bot_admins").split(","));
             SPAM_CHANNEL =  properties.getProperty("spam_channel");
             SPAM_WORDS =  Arrays.asList(properties.getProperty("spam_words").split(","));
@@ -78,6 +80,7 @@ public class Config {
     //Erstellt Datei, falls nicht vorhanden
     private static void fileNotFoundAction(File f){
         properties.put("bot_admins", "289077956976967680,289077956976967680");
+        properties.put("own_prefix", "sc!");
         properties.put("spam_words", "Run man.. RUN,GOTTA GO FAST!,mans not hot...,what are those?");
         properties.put("spam_channel", "");
         properties.put("active_guilds", "");

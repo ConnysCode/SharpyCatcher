@@ -25,7 +25,7 @@ public class Main {
         Config.init();
         Pokes.init();
 
-        System.out.println("\u001B[35m" + "Initializing SharpyCatcher v.0.1.2\u001B[0m");
+        System.out.println("\u001B[35m" + "Initializing SharpyCatcher v.0.1.3\u001B[0m");
 
         builder.setToken(Config.getValue("token"));
 
@@ -36,6 +36,7 @@ public class Main {
             jda = builder.build();
         } catch (LoginException e) {
             e.printStackTrace();
+            System.exit(0);
         }
 
 
