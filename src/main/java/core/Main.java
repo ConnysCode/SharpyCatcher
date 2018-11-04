@@ -25,7 +25,7 @@ public class Main {
         Config.init();
         Pokes.init();
 
-        System.out.println("\u001B[35m" + "Initializing SharpyCatcher v.1.0.2\u001B[0m");
+        System.out.println("\u001B[35m" + "Initializing SharpyCatcher v.0.1.2\u001B[0m");
 
         builder.setToken(Config.getValue("token"));
 
