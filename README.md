@@ -11,8 +11,8 @@ If you want to use the SharpyCather, we recommend that you create an account esp
 ## Commands
 | Command  | Usage |
 | ------------- | ------------- |
-| ``cs!refresh`` / ``cs!reload``  | Reload the Config  |
-| ``cs!echo`` / ``cs!run`` / ``cs!shell``  | Let the Catcher's account write something  |
+| ``sc!refresh`` / ``sc!reload``  | Reload the Config  |
+| ``sc!echo`` / ``sc!run`` / ``sc!shell``  | Let the Catcher's account write something  |
 
 ## Installation
 1. Download [SharpyCatcher](https://github.com/ConCodeDC/SharpyCatcher/releases) first
