@@ -25,13 +25,14 @@ public class Main {
         Config.init();
         Pokes.init();
 
-        System.out.println("\u001B[35m" + "Connecting...\u001B[0m");
+        System.out.println("\u001B[35m" + "Initializing SharpyCatcher v.1.0.2\u001B[0m");
 
         builder.setToken(Config.getValue("token"));
 
         initListeners();
 
         try {
+            System.out.println("\u001B[35m" + "Connecting...\u001B[0m");
             jda = builder.build();
         } catch (LoginException e) {
             e.printStackTrace();
