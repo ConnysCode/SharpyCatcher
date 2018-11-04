@@ -15,9 +15,9 @@ If you want to use the SharpyCather, we recommend that you create an account esp
 | ``sc!echo`` / ``sc!run`` / ``sc!shell``  | Let the Catcher's account write something  |
 
 ## Installation
-1. Download [SharpyCatcher](https://github.com/ConCodeDC/SharpyCatcher/releases) first
-2. Save the file: ``sharpyCatcher.jar`` in an empty folder
-3. Create a new text file in the same folder. Now write the following to the file: ``java -jar sharpyCatcher.jar``
-4. Now press "File" in the upper left corner, then ``"Save as..."``. Select ``"All files (*.*)"`` under ``"File type"`` in the following dialog. Now name the file ``"start.bat"`` in the field ``"File name"``. Now press save.
-5. Open the file you just created.
-6. Enjoy 😄
+1. Download [SharpyCatcher](https://github.com/ConCodeDC/SharpyCatcher/releases) first.
+2. Unzip ``SharpyCatcher.zip`` into an empty folder.
+5. Open the file ``start.bat``.
+6. At the first start the program will end immediately. Once it has finished, open the file ``config.properties`` with an editor and change the settings to your liking.
+7. Now open the file ``start.bat`` again.
+8. Enjoy 😄
