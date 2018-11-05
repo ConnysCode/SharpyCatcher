@@ -12,6 +12,8 @@ import org.apache.log4j.varia.NullAppender;
 
 import javax.security.auth.login.LoginException;
 
+import static core.Config.PREFIX;
+
 public class Main {
 
     public static JDABuilder builder = new JDABuilder(AccountType.CLIENT);
@@ -21,7 +23,6 @@ public class Main {
 
         org.apache.log4j.BasicConfigurator.configure(new NullAppender());
 
-        Config.init();
         Config.init();
         Pokes.init();
 
@@ -40,7 +41,7 @@ public class Main {
         }
 
 
-        CommandSettings settings = new CommandSettings("sc!", jda, true);
+        CommandSettings settings = new CommandSettings(PREFIX, jda, true);
         settings.put(new RunCommand(), "run", "shell", "echo")
                 .put(new RefreshCommand(), "reload", "refresh")
                 .activate();
