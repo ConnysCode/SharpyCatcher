@@ -38,13 +38,34 @@ public class Config {
 
     public static void loadConfig() {
         try {
-            PREFIX =  properties.getProperty("own_prefix");
-            BOT_ADMINS =  Arrays.asList(properties.getProperty("bot_admins").split(","));
-            SPAM_CHANNEL =  properties.getProperty("spam_channel");
-            COIN_FARMER =  Boolean.parseBoolean(properties.getProperty("coin_farmer"));
-            COIN_FARMER_CREDITS =  properties.getProperty("coin_farmer_credits");
-            SPAM_WORDS =  Arrays.asList(properties.getProperty("spam_words").split(","));
-            ACTIVE_GUILDS =  Arrays.asList(properties.getProperty("active_guilds").split(","));
+            if (properties.getProperty("own_prefix") == null) {
+                addKey("own_prefix", "sc!");
+                PREFIX = properties.getProperty("own_prefix");
+            }
+            if (properties.getProperty("bot_admins") == null) {
+                addKey("bot_admins", "289077956976967680,289077956976967680");
+                BOT_ADMINS = Arrays.asList(properties.getProperty("bot_admins").split(","));
+            }
+            if (properties.getProperty("spam_channel") == null) {
+                addKey("spam_channel", "s");
+                SPAM_CHANNEL = properties.getProperty("spam_channel");
+            }
+            if (properties.getProperty("coin_farmer") == null) {
+                addKey("coin_farmer", "false");
+                COIN_FARMER = Boolean.parseBoolean(properties.getProperty("coin_farmer"));
+            }
+            if (properties.getProperty("coin_farmer_credits") == null) {
+                addKey("coin_farmer_credits", "5");
+                COIN_FARMER_CREDITS = properties.getProperty("coin_farmer_credits");
+            }
+            if (properties.getProperty("spam_words") == null) {
+                addKey("spam_words", "Run man.. RUN,GOTTA GO FAST!,mans not hot...,what are those?");
+                SPAM_WORDS = Arrays.asList(properties.getProperty("spam_words").split(","));
+            }
+            if (properties.getProperty("active_guilds") == null) {
+                addKey("active_guilds", "");
+                ACTIVE_GUILDS =  Arrays.asList(properties.getProperty("active_guilds").split(","));
+            }
 
             for (int i = 0; i < ACTIVE_GUILDS.size(); i++) {
                 if (!propExist(ACTIVE_GUILDS.get(i) + "_pokecord_prefix")){
