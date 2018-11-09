@@ -5,6 +5,7 @@ import commands.RefreshCommand;
 import commands.RunCommand;
 import listener.MessageRecieved;
 import listener.OnReady;
+import listener.PrivateMessageRecieved;
 import net.dv8tion.jda.core.AccountType;
 import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
@@ -26,13 +27,11 @@ public class Main {
         Config.init();
         Pokes.init();
 
-        System.out.println("\u001B[35m" + "Initializing SharpyCatcher v.0.1.8\u001B[0m");
+        System.out.println("\u001B[35m" + "Initializing SharpyCatcher v0.1.8\u001B[0m");
 
         builder.setToken(Config.getValue("token"));
 
         initListeners();
-
-        System.out.println("Guilds: " + Config.ACTIVE_GUILDS.get(0));
 
         try {
             System.out.println("\u001B[35m" + "Connecting...\u001B[0m");
@@ -55,6 +54,7 @@ public class Main {
         builder
                 .addEventListener(new MessageRecieved())
                 .addEventListener(new OnReady())
+                .addEventListener(new PrivateMessageRecieved())
         ;
 
     }

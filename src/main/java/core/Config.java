@@ -38,7 +38,6 @@ public class Config {
 
     public static void loadConfig() {
         try {
-            System.out.println("11");
             if (properties.getProperty("own_prefix") == null) {
                 addKey("own_prefix", "sc!");
                 PREFIX = properties.getProperty("own_prefix");
@@ -82,7 +81,6 @@ public class Config {
                 ACTIVE_GUILDS =  Arrays.asList(properties.getProperty("active_guilds").split(","));
             }
 
-            System.out.println("13");
             for (int i = 0; i < ACTIVE_GUILDS.size(); i++) {
                 if (!propExist(ACTIVE_GUILDS.get(i) + "_pokecord_prefix")){
                     addKey(ACTIVE_GUILDS.get(i) + "_pokecord_prefix", "p!");
