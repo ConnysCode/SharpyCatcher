@@ -19,6 +19,8 @@ public class Config {
     public static String PREFIX = "sc!";
     public static List<String> ACTIVE_GUILDS = Collections.singletonList("");
     public static List<String> SPAM_WORDS = Collections.singletonList("");
+    public static boolean COIN_FARMER = false;
+    public static String COIN_FARMER_CREDITS = "";
 
     //Initialisiert die Datei -> In der Main ganz am Anfang aufrufen!
     public static void init(){
@@ -39,6 +41,8 @@ public class Config {
             PREFIX =  properties.getProperty("own_prefix");
             BOT_ADMINS =  Arrays.asList(properties.getProperty("bot_admins").split(","));
             SPAM_CHANNEL =  properties.getProperty("spam_channel");
+            COIN_FARMER =  Boolean.parseBoolean(properties.getProperty("coin_farmer"));
+            COIN_FARMER_CREDITS =  properties.getProperty("coin_farmer_credits");
             SPAM_WORDS =  Arrays.asList(properties.getProperty("spam_words").split(","));
             ACTIVE_GUILDS =  Arrays.asList(properties.getProperty("active_guilds").split(","));
 
@@ -49,7 +53,9 @@ public class Config {
             }
 
         } catch (Exception e) {
-
+            System.out.println(CLI.RED + "Configuration corrupted! Rewriting it!");
+            fileNotFoundAction(file);
+            System.exit(0);
         }
     }
 
@@ -85,6 +91,8 @@ public class Config {
         properties.put("spam_channel", "");
         properties.put("active_guilds", "");
         properties.put("token", "Insert Token Here");
+        properties.put("coin_farmer", "false");
+        properties.put("coin_farmer_credits", "5");
         try {
             properties.store(new FileOutputStream(f), "SharpyCatcher config");
         } catch (IOException e) {

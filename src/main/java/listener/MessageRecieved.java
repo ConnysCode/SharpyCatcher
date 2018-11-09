@@ -41,6 +41,18 @@ public class MessageRecieved extends ListenerAdapter {
                                 System.out.println("\u001B[35m" + "Waiting for Confirmation... [" + trys[0] + "]\u001B[0m");
                                 if (((MessageReceivedEvent) eventMSG).getGuild().getId().equals(((MessageReceivedEvent) eventMSG).getGuild().getId()) && ((MessageReceivedEvent) eventMSG).getAuthor().getId().equals(pokecordID) && ((MessageReceivedEvent) eventMSG).getMessage().getContentRaw().startsWith("Congratulations ") && ((MessageReceivedEvent) eventMSG).getMessage().getContentRaw().contains(pokeName) /* && ((MessageReceivedEvent) eventMSG).getMessage().getMentionedUsers().get(0).getId().equals(event.getJDA().getSelfUser())*/) {
                                     System.out.println("\u001B[32m" + "Successfully catched " + pokeName + "\u001B[0m");
+
+                                    if (Config.COIN_FARMER) {
+                                        try {
+                                            event.getMessage().getTextChannel().sendMessage(Config.getValue(event.getGuild().getId() + "_pokecord_prefix") + "market list 1 " + Config.COIN_FARMER_CREDITS).queue();
+                                            TimeUnit.SECONDS.sleep(1);
+                                            event.getTextChannel().sendMessage(Config.getValue(event.getGuild().getId() + "_pokecord_prefix") + "confirmlist").queue();
+                                            System.out.println("\u001B[32m" + "Successful listed Pokémon on the market for " + Config.COIN_FARMER_CREDITS + " credits" + "\u001B[0m");
+                                        } catch (InterruptedException e) {
+                                            e.printStackTrace();
+                                        }
+                                    }
+
                                     jda.removeEventListener(this);
                                 } else {
                                     trys[0]++;
