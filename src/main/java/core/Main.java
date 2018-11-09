@@ -26,11 +26,13 @@ public class Main {
         Config.init();
         Pokes.init();
 
-        System.out.println("\u001B[35m" + "Initializing SharpyCatcher v.0.1.7\u001B[0m");
+        System.out.println("\u001B[35m" + "Initializing SharpyCatcher v.0.1.8\u001B[0m");
 
         builder.setToken(Config.getValue("token"));
 
         initListeners();
+
+        System.out.println("Guilds: " + Config.ACTIVE_GUILDS.get(0));
 
         try {
             System.out.println("\u001B[35m" + "Connecting...\u001B[0m");

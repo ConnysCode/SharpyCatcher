@@ -6,6 +6,8 @@ import net.dv8tion.jda.core.events.Event;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.core.hooks.EventListener;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
+
+import javax.jws.soap.SOAPBinding;
 import java.util.concurrent.TimeUnit;
 
 import static core.Config.pokecordID;
@@ -19,6 +21,8 @@ public class MessageRecieved extends ListenerAdapter {
         final boolean[] waitingForConfirm = {false};
 
         if (Config.ACTIVE_GUILDS.contains(event.getGuild().getId()) && event.getAuthor().getId().equalsIgnoreCase(pokecordID) && event.getMessage().getEmbeds().size() != 0 && event.getMessage().getEmbeds().get(0).getTitle().contains("has appeared!")) {
+
+
             try {
                 System.out.println();
                 pokeHex = tools.HashStuff.getMD5(event.getMessage().getEmbeds().get(0).getImage().getUrl());
