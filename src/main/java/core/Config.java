@@ -20,6 +20,7 @@ public class Config {
     public static List<String> ACTIVE_GUILDS = Collections.singletonList("");
     public static List<String> SPAM_WORDS = Collections.singletonList("");
     public static boolean COIN_FARMER = false;
+    public static boolean PRIVATE_MSG = false;
     public static String COIN_FARMER_CREDITS = "";
 
     //Initialisiert die Datei -> In der Main ganz am Anfang aufrufen!
@@ -61,6 +62,12 @@ public class Config {
                 COIN_FARMER = Boolean.parseBoolean(properties.getProperty("coin_farmer"));
             } else {
                 COIN_FARMER = Boolean.parseBoolean(properties.getProperty("coin_farmer"));
+            }
+            if (properties.getProperty("private_msg") == null) {
+                addKey("private_msg", "false");
+                PRIVATE_MSG = Boolean.parseBoolean(properties.getProperty("private_msg"));
+            } else {
+                PRIVATE_MSG = Boolean.parseBoolean(properties.getProperty("private_msg"));
             }
             if (properties.getProperty("coin_farmer_credits") == null) {
                 addKey("coin_farmer_credits", "5");
@@ -127,6 +134,7 @@ public class Config {
         properties.put("active_guilds", "");
         properties.put("token", "Insert Token Here");
         properties.put("coin_farmer", "false");
+        properties.put("private_msg", "false");
         properties.put("coin_farmer_credits", "5");
         try {
             properties.store(new FileOutputStream(f), "SharpyCatcher config");

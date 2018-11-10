@@ -4,6 +4,7 @@ import core.Config;
 import core.Main;
 import net.dv8tion.jda.core.events.ReadyEvent;
 import net.dv8tion.jda.core.hooks.ListenerAdapter;
+import tools.PrivateMessageCreator;
 
 import java.util.Arrays;
 
