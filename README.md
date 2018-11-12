@@ -20,7 +20,7 @@ If you want to use the SharpyCather, we recommend that you create an account esp
 | ``[  ]`` Argument | The argument is absolutely necessary |
 | ``<  >`` Argument | The argument is not absolutely necessary |
 
-### Commands
+### Command List
 | Command  | Usage |
 | ------------- | ------------- |
 | ``sc!refresh`` / ``sc!reload``  | Reload the Config  |
