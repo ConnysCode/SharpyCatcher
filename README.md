@@ -29,6 +29,8 @@ If you want to use the SharpyCather, we recommend that you create an account esp
 | ``sc!trade [int (<=25)]``  | Start to Trade the amount of Pokémon's that you enter  |
 
 ## Installation
+> You must have [Java(>=8)](https://java.com/de/download/) installed, of course.
+
 1. Download [SharpyCatcher](https://github.com/ConCodeDC/SharpyCatcher/releases) first.
 2. Unzip ``SharpyCatcher.zip`` into an empty folder.
 5. Open the file ``start.bat``.
