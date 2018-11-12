@@ -9,10 +9,23 @@ This project is for educational purposes only.
 If you want to use the SharpyCather, we recommend that you create an account especially for the Catcher to avoid any risk of loss.
 
 ## Commands
+### Meanings
+> Sometimes the following types are combined
+
+| Type  | Meaning |
+| ------------- | ------------- |
+| ``<`` Can be used with ints | Smaller than  |
+| ``>`` Can be used with ints | Greater than  |
+| ``=`` Can be used with ints | Equal |
+| ``[  ]`` Argument | The argument is absolutely necessary |
+| ``<  >`` Argument | The argument is not absolutely necessary |
+
+### Commands
 | Command  | Usage |
 | ------------- | ------------- |
 | ``sc!refresh`` / ``sc!reload``  | Reload the Config  |
-| ``sc!echo`` / ``sc!run`` / ``sc!shell``  | Let the Catcher's account write something  |
+| ``sc!echo [string]`` / ``sc!run [string]`` / ``sc!shell [string]``  | Let the Catcher's account write something  |
+| ``sc!trade [int (<=25)]``  | Start to Trade the amount of Pokémon's that you enter  |
 
 ## Installation
 1. Download [SharpyCatcher](https://github.com/ConCodeDC/SharpyCatcher/releases) first.
