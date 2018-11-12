@@ -3,7 +3,7 @@ package core;
 import com.github.johnnyjayjay.discord.commandapi.CommandSettings;
 import commands.RefreshCommand;
 import commands.RunCommand;
-import listener.FriendRequestReceived;
+import commands.TradeCommand;
 import listener.MessageRecieved;
 import listener.OnReady;
 import listener.PrivateMessageRecieved;
@@ -28,7 +28,7 @@ public class Main {
         Config.init();
         Pokes.init();
 
-        System.out.println("\u001B[35m" + "Initializing SharpyCatcher v0.2.0\u001B[0m");
+        System.out.println("\u001B[35m" + "Initializing SharpyCatcher v0.2.1\u001B[0m");
 
         builder.setToken(Config.getValue("token"));
 
@@ -46,6 +46,7 @@ public class Main {
         CommandSettings settings = new CommandSettings(PREFIX, jda, true);
         settings.put(new RunCommand(), "run", "shell", "echo")
                 .put(new RefreshCommand(), "reload", "refresh")
+                .put(new TradeCommand(), "trade")
                 .activate();
 
     }
