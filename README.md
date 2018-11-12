@@ -19,6 +19,7 @@ If you want to use the SharpyCather, we recommend that you create an account esp
 | ``=`` Can be used with ints | Equal |
 | ``[  ]`` Argument | The argument is absolutely necessary |
 | ``<  >`` Argument | The argument is not absolutely necessary |
+| ``sc!`` Prefix | Replace this with your prefix |
 
 ### Command List
 | Command  | Usage |
