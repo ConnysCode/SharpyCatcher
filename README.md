@@ -1,3 +1,5 @@
+This Project is very old.. and well - PokeCord is dead. So i archived this repository.
+
 # SharpyCatcher
 Free autocatcher for [Pokécord](https://www.pokecord.com/)
 ![Image of Yaktocat](https://www2.pic-upload.de/img/36217582/logo-shadow2.png)
