@@ -1,7 +1,6 @@
-This Project is very old.. and well - PokeCord is dead. So i archived this repository.
+This Project is very old.. and well - [Pokécord](https://www.pokecord.com/) is dead. So i archived this repository.
 
 # SharpyCatcher
-Free autocatcher for [Pokécord](https://www.pokecord.com/)
 ![Logo](https://img.namespace.media/images/2021/09/19/logo.png)
 
 ### Disclaimer
