@@ -2,7 +2,7 @@ This Project is very old.. and well - PokeCord is dead. So i archived this repos
 
 # SharpyCatcher
 Free autocatcher for [Pokécord](https://www.pokecord.com/)
-![Image of Yaktocat](https://www2.pic-upload.de/img/36217582/logo-shadow2.png)
+![Logo](https://img.namespace.media/images/2021/09/19/logo.png)
 
 ### Disclaimer
 This bot is a selfbot. Selfbots are prohibited by the [Discord ToS](https://discordapp.com/terms) and may cause you to lose your account.
